@@ -4,8 +4,8 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
-  title: 'VIP INTERNATIONAL — Ербол Шамилович',
-  description: 'Ербол Шамилович — сетевой маркетолог с 9-летним опытом. Натуральные продукты для здоровья и красоты.',
+  title: 'VIP INTERNATIONAL',
+  description: 'Роза Шотаева - Diamond Лидер',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

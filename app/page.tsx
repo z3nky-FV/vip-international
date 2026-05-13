@@ -111,7 +111,7 @@ export default function HomePage() {
                   padding: '10px', borderRadius: 10, fontSize: 13, fontWeight: 600,
                   transition: 'background .2s',
                 }}>
-                  Читать историю →
+                  О компании →
                 </Link>
               </div>
             </div>

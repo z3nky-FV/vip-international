@@ -206,7 +206,7 @@ export default function AboutPage() {
             <Link href="/catalog" className="btn-primary" style={{ background: '#fff', color: 'var(--primary)' }}>
               Перейти в каталог
             </Link>
-            <a href="https://wa.me/77782569912?text=Здравствуйте, хочу в вашу команду!"
+            <a href="https://wa.me/77715597177?text=Здравствуйте, хочу в вашу команду!"
               target="_blank" rel="noreferrer"
               className="btn-secondary"
               style={{ borderColor: 'rgba(255,255,255,0.4)', color: '#fff' }}>

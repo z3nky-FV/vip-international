@@ -56,7 +56,7 @@ export default function ExpandableStory() {
           </Link>
         )}
         <a
-          href="https://wa.me/77782569912?text=Здравствуйте, я пишу вам с сайта"
+          href="https://wa.me/77715597177?text=Здравствуйте, я пишу вам с сайта"
           target="_blank" rel="noreferrer"
           className="btn-secondary">
           Написать на WhatsApp
