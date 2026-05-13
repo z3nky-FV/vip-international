@@ -14,10 +14,10 @@ const stats = [
 ]
 
 const features = [
-  { icon: 'VI', title: 'Натуральные компоненты', desc: 'Все продукты созданы из природных ингредиентов без вредных химических добавок.' },
-  { icon: 'VI', title: 'Проверенное качество', desc: 'Прошли все необходимые проверки и получили соответствующие сертификаты.' },
-  { icon: 'VI', title: 'Бизнес-возможности', desc: 'Присоединяйтесь к команде и зарабатывайте вместе с VIP INTERNATIONAL.' },
-  { icon: 'VI', title: 'Широкий ассортимент', desc: 'От витаминов и БАД до косметики — продукты для всей семьи.' },
+  { title: 'Натуральные компоненты', desc: 'Все продукты созданы из природных ингредиентов без вредных химических добавок.' },
+  { title: 'Проверенное качество', desc: 'Прошли все необходимые проверки и получили соответствующие сертификаты.' },
+  { title: 'Бизнес-возможности', desc: 'Присоединяйтесь к команде и зарабатывайте вместе с VIP INTERNATIONAL.' },
+  { title: 'Широкий ассортимент', desc: 'От витаминов и БАД до косметики — продукты для всей семьи.' },
 ]
 
 export default function HomePage() {
@@ -142,13 +142,7 @@ export default function HomePage() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 24 }}>
             {features.map((f, i) => (
               <div key={f.title} className="card" style={{ padding: '1.75rem', animation: `fadeUp 0.6s ${i * 0.1}s ease both` }}>
-                <div style={{
-                  width: 56, height: 56, borderRadius: 16,
-                  background: 'var(--primary-bg)', color: 'var(--primary)', display: 'flex', alignItems: 'center',
-                  justifyContent: 'center', fontSize: 18, fontWeight: 800, marginBottom: 16,
-                }}>
-                  {f.icon}
-                </div>
+
                 <h3 style={{ fontSize: 16, fontWeight: 700, marginBottom: 8 }}>{f.title}</h3>
                 <p style={{ fontSize: 14, color: 'var(--text-muted)', lineHeight: 1.7 }}>{f.desc}</p>
               </div>

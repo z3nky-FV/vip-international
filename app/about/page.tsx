@@ -74,12 +74,11 @@ export default function AboutPage() {
               <h2 style={{ fontSize: 'clamp(22px, 2.5vw, 32px)', fontWeight: 800, marginBottom: 20 }}>О компании</h2>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
                 {[
-                  { icon: '📅', text: 'Компания основана в 2015 году, с 2018 года начала свою деятельность как сетевая компания в Турции, город Мерсин.' },
-                  { icon: '🇰🇿', text: 'С 15 декабря 2020 года официально открыт офис в Казахстане.' },
-                  { icon: '🌐', text: 'К 2023 году компания работает в Турции, Казахстане, Кыргызстане, Узбекистане, России и Таджикистане.' },
+                  { text: 'Компания основана в 2015 году, с 2018 года начала свою деятельность как сетевая компания в Турции, город Мерсин.' },
+                  { text: 'С 15 декабря 2020 года официально открыт офис в Казахстане.' },
+                  { text: 'К 2023 году компания работает в Турции, Казахстане, Кыргызстане, Узбекистане, России и Таджикистане.' },
                 ].map((item, i) => (
-                  <div key={i} style={{ display: 'flex', gap: 14, alignItems: 'flex-start', background: 'var(--gray-bg)', borderRadius: 12, padding: '16px' }}>
-                    <span style={{ fontSize: 18, fontWeight: 800, color: 'var(--primary)', flexShrink: 0 }}>VI</span>
+                  <div key={i} style={{ display: 'flex', background: 'var(--gray-bg)', borderRadius: 12, padding: '16px' }}>
                     <p style={{ fontSize: 15, lineHeight: 1.75, color: 'var(--text-muted)' }}>{item.text}</p>
                   </div>
                 ))}
@@ -172,18 +171,13 @@ export default function AboutPage() {
           </div>
           <div className="marquee-container" style={{ margin: '0 -1.5rem', width: 'calc(100% + 3rem)' }}>
             <div className="marquee-content">
-              {/* Duplicate the array to create a seamless loop */}
-              {[...Array(2)].map((_, loopIndex) => (
-                <div key={loopIndex} style={{ display: 'flex', gap: '2rem', flexShrink: 0 }}>
-                  {[1, 2, 3, 4, 5, 6, 7].map(num => (
-                    <img
-                      key={num}
-                      src={`/images/certs/cert${num}.jpg`}
-                      alt={`Сертификат ${num}`}
-                      className="cert-image"
-                    />
-                  ))}
-                </div>
+              {[1, 2, 3, 4, 5, 6, 7].map(num => (
+                <img
+                  key={num}
+                  src={`/images/certs/cert${num}.jpg`}
+                  alt={`Сертификат ${num}`}
+                  className="cert-image"
+                />
               ))}
             </div>
           </div>

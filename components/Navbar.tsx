@@ -151,20 +151,11 @@ export default function Navbar() {
           <Link href="/about" style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '12px 0', fontSize: 15, fontWeight: 500, borderBottom: '1px solid var(--border)' }} onClick={() => setMobileOpen(false)}>
             О компании
           </Link>
-          <Link href="/catalog" style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '12px 0', fontSize: 15, fontWeight: 500, borderBottom: '1px solid var(--border)' }} onClick={() => setMobileOpen(false)}>
+          <Link href="/catalog" style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '12px 0', fontSize: 15, fontWeight: 500 }} onClick={() => setMobileOpen(false)}>
             Каталог
           </Link>
-          <div style={{ padding: '8px 0' }}>
-            {catalogItems.map(item => (
-              <Link key={item.slug} href={`/catalog/${item.slug}`}
-                style={{ display: 'block', padding: '8px 12px', fontSize: 13, color: 'var(--text-muted)' }}
-                onClick={() => setMobileOpen(false)}>
-                — {item.name}
-              </Link>
-            ))}
-          </div>
           <a
-            href="https://wa.me/77782569912?text=Здравствуйте"
+            href="https://wa.me/77715597177?text=Здравствуйте"
             target="_blank" rel="noreferrer"
             className="btn-primary"
             style={{ marginTop: 12, display: 'block', textAlign: 'center' }}

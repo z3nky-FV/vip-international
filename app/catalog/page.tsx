@@ -74,11 +74,7 @@ export default function CatalogPage() {
           {categories.map(cat => (
             <div key={cat} style={{ marginBottom: '4rem' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 24, paddingBottom: 16, borderBottom: '2px solid var(--primary-bg)' }}>
-                <span style={{
-                  width: 44, height: 44, borderRadius: 12,
-                  background: 'linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%)',
-                  display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 18, fontWeight: 700, color: '#fff', flexShrink: 0,
-                }}>{categoryIcons[cat] || 'VI'}</span>
+
                 <h2 style={{ fontSize: 20, fontWeight: 700 }}>{cat}</h2>
                 <span className="badge" style={{ marginLeft: 'auto' }}>
                   {products.filter(p => p.category === cat).length} шт.
@@ -103,7 +99,7 @@ export default function CatalogPage() {
                         }}>
                           <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(255,255,255,0.12) 0%, transparent 55%)' }} />
                           <div style={{ position: 'absolute', bottom: -20, right: -20, width: 90, height: 90, borderRadius: '50%', background: 'rgba(255,255,255,0.06)' }} />
-                          <span style={{ position: 'relative', zIndex: 1 }}>{categoryIcons[cat] || 'VI'}</span>
+
                         </div>
                       )}
                       <div style={{ padding: '0.875rem' }}>

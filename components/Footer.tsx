@@ -3,6 +3,7 @@ export default function Footer() {
   const socials = [
     { icon: <img src="/images/instagram.jpg" alt="Instagram" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 11 }} />, label: 'Instagram', href: 'https://www.instagram.com/roza_vip.international/' },
     { icon: <img src="/images/whatsapp.jpg" alt="WhatsApp" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 11 }} />, label: 'WhatsApp', href: 'https://wa.me/77715597177' },
+    { icon: <img src="/images/telegram.jpg" alt="Telegram" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 11 }} />, label: 'Telegram', href: 'https://t.me/vipinternationalofficial' },
   ]
 
   return (

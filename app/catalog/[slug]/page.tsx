@@ -54,13 +54,14 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
       {/* ── Main product section ── */}
       <section style={{ padding: '3.5rem 1.5rem', background: 'var(--bg-color)' }}>
         <div className="section-container">
-          <div style={{ display: 'grid', gridTemplateColumns: '340px 1fr', gap: '3.5rem', alignItems: 'start' }}>
+          <div className="responsive-grid-founder responsive-gap" style={{ alignItems: 'start' }}>
             
             {/* Product visual */}
             <div>
               {product.image ? (
                 <div style={{
-                  height: 340,
+                  aspectRatio: '1/1',
+                  maxHeight: 400,
                   borderRadius: 20,
                   overflow: 'hidden',
                   boxShadow: '0 20px 60px rgba(108,79,212,0.25)',
@@ -70,7 +71,8 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
                 </div>
               ) : (
                 <div style={{
-                  height: 340,
+                  aspectRatio: '1/1',
+                  maxHeight: 400,
                   background: 'linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%)',
                   borderRadius: 20, display: 'flex', flexDirection: 'column',
                   alignItems: 'center', justifyContent: 'center',
@@ -117,7 +119,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
                 <h3 style={{ fontSize: 15, fontWeight: 700, marginBottom: 14, color: 'var(--text)' }}>
                   Преимущества продукта:
                 </h3>
-                <ul style={{ listStyle: 'none', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10 }}>
+                <ul style={{ listStyle: 'none', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: 12 }}>
                   {product.benefits.map(b => (
                     <li key={b} style={{ display: 'flex', gap: 10, alignItems: 'flex-start', fontSize: 14 }}>
                       <span style={{
@@ -170,39 +172,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
         </div>
       </section>
 
-      {/* Related products */}
-      {related.length > 0 && (
-        <section style={{ background: 'var(--gray-bg)', padding: '4rem 1.5rem' }}>
-          <div className="section-container">
-            <h2 style={{ fontSize: 22, fontWeight: 800, marginBottom: 24 }}>
-              Похожие продукты — {product.category}
-            </h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: 20 }}>
-              {related.map((p, i) => (
-                <Link key={p.slug} href={`/catalog/${p.slug}`} style={{ textDecoration: 'none', color: 'inherit' }}>
-                  <div className="card" style={{ height: '100%' }}>
-                    <div style={{
-                      height: 140,
-                      background: `linear-gradient(135deg, hsl(${158 + i * 8}, 65%, 40%) 0%, hsl(${168 + i * 5}, 58%, 35%) 100%)`,
-                      display: 'flex', alignItems: 'center', justifyContent: 'center',
-                      fontSize: 24, fontWeight: 800, color: '#fff', position: 'relative', overflow: 'hidden',
-                    }}>
-                      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(255,255,255,0.12) 0%, transparent 55%)' }} />
-                      <span style={{ position: 'relative', zIndex: 1 }}>{icon}</span>
-                    </div>
-                    <div style={{ padding: '0.875rem' }}>
-                      <p style={{ fontSize: 11, color: 'var(--primary)', fontWeight: 700, marginBottom: 4, textTransform: 'uppercase', letterSpacing: '0.4px' }}>
-                        {p.category}
-                      </p>
-                      <h3 style={{ fontSize: 13, fontWeight: 600, lineHeight: 1.4 }}>{p.name}</h3>
-                    </div>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
+
 
       {/* CTA */}
       <section style={{
