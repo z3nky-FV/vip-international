@@ -138,13 +138,13 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
               {product.qa && product.qa.length > 0 && (
                 <div style={{ background: 'var(--card-bg)', border: '1px solid var(--border)', borderRadius: 16, padding: '1.5rem', marginBottom: 28 }}>
                   <h3 style={{ fontSize: 15, fontWeight: 700, marginBottom: 14, color: 'var(--text)' }}>
-                    Вопросы и ответы:
+                    ВОПРОСЫ И ОТВЕТЫ (ТЕСТ):
                   </h3>
                   <div style={{ display: 'grid', gap: 16 }}>
                     {product.qa.map((item, i) => (
                       <div key={i} style={{ paddingBottom: 16, borderBottom: i < product.qa!.length - 1 ? '1px solid var(--border)' : 'none' }}>
-                        <p style={{ fontWeight: 600, fontSize: 14, marginBottom: 6, color: 'var(--primary)' }}>Q: {item.question}</p>
-                        <p style={{ fontSize: 14, color: 'var(--text-muted)', lineHeight: 1.6 }}>A: {item.answer}</p>
+                        <p style={{ fontWeight: 600, fontSize: 14, marginBottom: 6, color: 'var(--primary)' }}>{item.question}</p>
+                        <p style={{ fontSize: 14, color: 'var(--text-muted)', lineHeight: 1.6 }}>{item.answer}</p>
                       </div>
                     ))}
                   </div>
