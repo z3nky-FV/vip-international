@@ -41,7 +41,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
   return (
     <>
       {/* Breadcrumb */}
-      <div style={{ background: 'var(--gray-bg)', borderBottom: '1px solid var(--border)', padding: '12px 1.5rem' }}>
+      <div style={{ background: 'var(--gray-bg)', borderBottom: '1px solid var(--border)', padding: '12px 0' }}>
         <div className="section-container" style={{ display: 'flex', alignItems: 'center', gap: 6, fontSize: 13, color: 'var(--text-muted)', flexWrap: 'wrap' }}>
           <Link href="/" style={{ color: 'var(--primary)', fontWeight: 500 }}>Главная</Link>
           <span style={{ opacity: 0.4 }}>/</span>
@@ -52,7 +52,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
       </div>
 
       {/* ── Main product section ── */}
-      <section style={{ padding: '3.5rem 1.5rem', background: 'var(--bg-color)' }}>
+      <section style={{ padding: '3.5rem 0', background: 'var(--bg-color)' }}>
         <div className="section-container">
           <div className="responsive-grid-founder responsive-gap" style={{ alignItems: 'start' }}>
             
@@ -138,7 +138,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
               {product.qa && product.qa.length > 0 && (
                 <div style={{ background: 'var(--card-bg)', border: '1px solid var(--border)', borderRadius: 16, padding: '1.5rem', marginBottom: 28 }}>
                   <h3 style={{ fontSize: 15, fontWeight: 700, marginBottom: 14, color: 'var(--text)' }}>
-                    ВОПРОСЫ И ОТВЕТЫ (ТЕСТ):
+                    Вопросы и ответы:
                   </h3>
                   <div style={{ display: 'grid', gap: 16 }}>
                     {product.qa.map((item, i) => (
@@ -176,7 +176,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
 
       {/* CTA */}
       <section style={{
-        padding: '4rem 1.5rem',
+        padding: '4rem 0',
         background: 'linear-gradient(135deg, #022c22 0%, var(--primary) 100%)',
         color: '#fff', textAlign: 'center',
       }}>
